@@ -1,10 +1,11 @@
 import math
 
 def convert_weight_to_kg(weight):
-    pass
+    return weight * 0.45
 
 def convert_height_to_meters(height_ft, height_in):
-    pass
+    total_in = (height_ft * 12) + height_in
+    return total_in * 0.025
 
 def calculate_bmi(weight, height_ft, height_in):
     pass
