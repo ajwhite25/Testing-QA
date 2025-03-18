@@ -54,7 +54,9 @@ def test_calculate_bmi(weight, ft, inches, expected):
 (18.4, "Underweight"),
 (18.5, "Normal weight"),
 (20, "Normal weight"),
+(24.9, "Normal weight"),
 (25, "Overweight"),
+(29.9, "Overweight"),
 (30, "Obese"),
 ])
 def test_bmi_category(bmi, category):
