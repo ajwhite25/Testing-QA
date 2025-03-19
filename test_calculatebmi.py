@@ -33,7 +33,7 @@ def test_convert_height_to_meters(ft, inches, conversion):
 
 @pytest.mark.parametrize("ft, inches", [
     (5,12),
-    (10, 14),
+    (6, 13),
 ])
 def test_invalid_height(ft, inches):
     with pytest.raises(ValueError):
@@ -50,12 +50,12 @@ def test_calculate_bmi(weight, ft, inches, expected):
     assert calculate_bmi(weight, ft, inches) == pytest.approx(expected, rel=1e-1)
 
 @pytest.mark.parametrize("bmi, category",[
-(18.0, "Underweight"),
 (18.4, "Underweight"),
 (18.5, "Normal weight"),
 (20, "Normal weight"),
 (24.9, "Normal weight"),
 (25, "Overweight"),
+(27.5, "Overweight"),
 (29.9, "Overweight"),
 (30, "Obese"),
 ])
